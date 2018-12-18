@@ -10,6 +10,11 @@
   src: url('maven-pro/MavenPro-Bold.ttf');
 }
 
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: #f2f2f2;
+}
 /*No-Select Class*/
 .noselect{
   -webkit-touch-callout: none; /* iOS Safari */
@@ -40,21 +45,20 @@ div.navbar *::selection{
 
 .navbar-nav{
   text-align: center;
-  margin-left: -80px;
+  /* margin-left: -80px; */
 }
 
 .nav-item{
-  padding-bottom:0;
+  /* padding-bottom:0; */
   padding-top: 0;
   padding-left: 30px;
 }
 
 .nav-link{
-  color: white;
+  color: rgba(48, 48, 48, 0.781);
   font-family: "Maven";
   font-size: 25px;
-  text-shadow: 2px 2px 6px black;
-}
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);}
 
 .nav-link:hover{
   color: #b12;
@@ -77,6 +81,74 @@ div.navbar *::selection{
   background: transparent;
 }
 
+.divider {
+  width: 100%; 
+  box-shadow: 0 10px 40px 40px black;
+}
+/* Scroll Start */
+#scrollBtn a {
+  padding-top: 70px;
+}
+#scrollBtn a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb05 1.5s infinite;
+  animation: sdb05 1.5s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb05 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes sdb05 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+.demo a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.demo a:hover {
+  opacity: .5;
+}
+/* Scroll End */
 /*Cards CSS*/
 #mainPage{
   box-shadow: 0 10px 40px 40px black;
@@ -84,26 +156,49 @@ div.navbar *::selection{
   position: absolute;
   height: 25%;
   padding: 5%;
-}
+  overflow: none;
 
+}
+.card {
+  background-color: transparent ;
+  color: white;
+}
+.card-body {
+   color: white;
+}
+.card-title {
+  font-size: 22px;
+}
 #c1{
-	background-image: linear-gradient(-60deg, #ddd 80%, #000 100%);
+	background-image: linear-gradient(-60deg, #2980b9 80%, #000 100%);
 }
 
 #c2{
-  background-image: linear-gradient(-60deg, #ddd 80%, #000 100%);
+  background-image: linear-gradient(-60deg, #e74c3c 80%, #000 100%);
 }
 
 #c3{
-  background-image: linear-gradient(-60deg, #ddd 80%, #000 100%);
+  background-image: linear-gradient(-60deg, #27ae60 80%, #000 100%);
 }
 
 #c1:hover,#c2:hover,#c3:hover{
   transform: scale(1.03,1.03);
   transition-duration: .2s;
 }
-
+.card-title {
+  text-align: center;
+}
+.card {
+  border:none;
+  cursor: pointer;
+  color: black;
+}
+.card:hover {
+  color:black;
+  text-decoration: none;
+}
 .card a{
+  cursor: pointer;
   color:black;
 }
 
@@ -146,17 +241,19 @@ div.navbar *::selection{
 
 #learn-more:hover{
   background: #812;
-  transform: scale(1.15,1.15);
-  transition-duration: .25s;
+  /* transform: scale(1.15,1.15); */
+  /* transition-duration: .25s; */
 }
-
+#Syrus{
+  letter-spacing: 5px;
+}
 /*Media Queries*/
 @media only screen and (max-width: 768px){
   body{
     overflow:hidden;
   }
  	#Syrus{
- 		font-size: 16vw;
+     font-size: 16vw;
  	}
 }
 
@@ -228,4 +325,20 @@ div.navbar *::selection{
 #mainSocial i:hover{
   transform: scale(1.1,1.1);
   transition-duration: .25s;
+}
+
+/* Social Media Feeds */
+#curator-feed {
+  background:transparent;
+  margin-top: 2%;
+  background-color: #f2f2f2;
+}
+#curator-feed h2 {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+#cur {
+  background-image: url('../imgs/back.jpg');
+  background-attachment: fixed;
 }
